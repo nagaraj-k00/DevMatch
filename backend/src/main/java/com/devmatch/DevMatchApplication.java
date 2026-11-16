@@ -1,3 +1,4 @@
+
 package com.devmatch;
 
 import org.springframework.boot.SpringApplication;
@@ -17,6 +18,18 @@ public class DevMatchApplication {
         SpringApplication.run(DevMatchApplication.class, args);
     }
 
+    // Root endpoint - verifies backend availability
+    @GetMapping("/")
+    public Map<String, Object> home() {
+        return Map.of(
+                "application", "DevMatch AI",
+                "status", "UP",
+                "message", "Backend is running successfully",
+                "version", "1.0.0"
+        );
+    }
+
+    // Health check endpoint
     @GetMapping("/api/health")
     public Map<String, Object> healthCheck() {
         return Map.of(
