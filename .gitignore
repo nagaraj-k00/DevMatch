@@ -1,6 +1,24 @@
+# Gradle generated files
 .gradle/
+**/.gradle/
+build/
 **/build/
+
+# Frontend generated files
+node_modules/
 **/node_modules/
+dist/
+**/dist/
+
+# Environment secrets
 .env
-*.log
+.env.*
+!.env.example
+
+# IDE files
 .idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
